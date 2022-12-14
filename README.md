@@ -29,7 +29,7 @@ Ainda em desenvolvimento, aceito contribuições
 Se você tiver algum feedback, por favor nos deixe saber por meio de  <a href = "mailto:svgabriel18@hotmail.com"><img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a>
 
 
-## Screenshots
+## Tela Inicial
 
 <img width="650px" align="center" src="../fastburger/readme/desktop.jpg">
 
