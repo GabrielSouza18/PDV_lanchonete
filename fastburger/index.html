@@ -1,0 +1,195 @@
+<?php
+session_start();
+include('../fastburger/php_action/verifica_login.php');
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Fastburger - Gerenciador</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- MENU DE OPÇÕES -->
+  <a class="menu-toggle">
+    <img src="assets/img/menuHamburger.png" width="15px" class="hover" />
+  </a>
+  <nav class="navbar navbar-expand" id="sidebar-wrapper">
+    <div class="container">
+      <button data-bs-toggle="collapse" class="navbar-toggler d-none" data-bs-target="#"></button>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav sidebar-nav" id="sidebar-nav">
+          <li class="nav-item sidebar-brand">
+            <a class="nav-link active js-scroll-trigger">Menu</a>
+          </li>
+          <hr />
+          <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" id="btnUsuario">
+              Usuario
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../fastburger/inclusao/inclusaoUsuario.php">Inclusão</a></li>
+              <li><a class="dropdown-item" href="../fastburger/alteracao/alteracaoUsuario.php">Alteração</a></li>
+              <li><a class="dropdown-item" href="../fastburger/consulta/consultaUsuario.php">Consulta</a></li>
+              <li><a class="dropdown-item" href="../fastburger/exclusao/exclusaoUsuario.php">Exclusão</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" id="btnCliente">
+              Cliente
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../fastburger/inclusao/inclusaoCliente.php">Inclusão</a></li>
+              <li><a class="dropdown-item" href="../fastburger/alteracao/alteracaoCliente.php">Alteração</a></li>
+              <li><a class="dropdown-item" href="../fastburger/consulta/consultaCliente.php">Consulta</a></li>
+              <li><a class="dropdown-item" href="../fastburger/exclusao/exclusaoCliente.php">Exclusão</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" id="btnFornecedor">
+              Fornecedor
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../fastburger/inclusao/inclusaoFornecedor.php">Inclusão</a></li>
+              <li><a class="dropdown-item" href="../fastburger/alteracao/alteracaoFornecedor.php">Alteração</a></li>
+              <li><a class="dropdown-item" href="../fastburger/consulta/consultaFornecedor.php">Consulta</a></li>
+              <li><a class="dropdown-item" href="../fastburger/exclusao/exclusaoFornecedor.php">Exclusão</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" id="btnProduto">
+              Produto
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../fastburger/inclusao/inclusaoProduto.php">Inclusão</a></li>
+              <li><a class="dropdown-item" href="../fastburger/alteracao/alteracaoProduto.php">Alteração</a></li>
+              <li><a class="dropdown-item" href="../fastburger/consulta/consultaProduto.php">Consulta</a></li>
+              <li><a class="dropdown-item" href="../fastburger/exclusao/exclusaoProduto.php">Exclusão</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" id="btnEstoque">
+              Estoque
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../fastburger/inclusao/inclusaoEstoque.php">Inclusão</a></li>
+              <li><a class="dropdown-item" href="../fastburger/alteracao/alteracaoEstoque.php">Alteração</a></li>
+              <li><a class="dropdown-item" href="../fastburger/consulta/consultaEstoque.php">Consulta</a></li>
+              <li><a class="dropdown-item" href="../fastburger/exclusao/exclusaoEstoque.php">Exclusão</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+              <button class="btn btn-outline-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false" id="btnPDV">
+                <a class="dropdown-item" href="../fastburger/pdv/pdv.php">PDV</a>
+              </button>
+          </div>
+          <center>
+            <li class="nav-item sidebar-nav-item">
+              <a href="../fastburger/php_action/logout.php"><button type="button" class="btn btn-danger">Sair</button></a>
+            </li>
+          </center>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- TELA INICIAL -->
+  <header class="d-flex masthead">
+    <div class="container my-auto text-center">
+      <img src="assets/img/fastburgerlogo.png" alt="logofastburger" id="logo" /><br />
+      <h3><em>Gerenciador do sistema</em></h3>
+      <br />
+      <a href="#pesquisa">
+        <button type="button" class="btn btn-danger" id="btnPesquisa">Pesquisa</button></a>
+      <a href="../fastburger/pdv/pdv.php">
+        <button type="button" class="btn btn-danger" id="btnPesquisa">PDV</button></a>
+    </div>
+
+    </div>
+  </header>
+
+  <section id="pesquisa" class="content-section bg-primary text-white text-center">
+    <div class="container">
+      <div class="content-section-heading">
+        <h2>Escolha uma opção</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <span class="mx-auto service-icon rounded-circle mb-3">
+            <a href="../fastburger/inclusao/inclusaoUsuario.php">
+              <img src="assets/img/usuario.png" width="70%" /></a>
+          </span>
+          <h4><strong>Usuario</strong></h4>
+
+        </div>
+
+        <div class="col-lg-3">
+          <span class="mx-auto service-icon rounded-circle mb-3">
+            <a href="../fastburger/inclusao/inclusaoCliente.php">
+              <img src="assets/img/clientes.png" width="70%" /></a>
+          </span>
+          <h4><strong>Cliente</strong></h4>
+        </div>
+        <div class="col-lg-3">
+
+          <span class="mx-auto service-icon rounded-circle mb-3">
+            <a href="../fastburger/inclusao/inclusaoFornecedor.php">
+              <img src="assets/img/fornecedores.png" width="70%" /></a>
+          </span>
+          <h4><strong>Fornecedores</strong></h4>
+
+        </div>
+
+        <div class="col-lg-3">
+          <span class="mx-auto service-icon rounded-circle mb-3">
+            <a href="../fastburger/inclusao/inclusaoProduto.php">
+              <img src="assets/img/produtos.png" width="70%" /></a>
+          </span>
+          <h4><strong>Produtos</strong></h4>
+        </div>
+        <center>
+          <div class="col-lg-3">
+            <span class="mx-auto service-icon rounded-circle mb-3">
+              <a href="../fastburger/inclusao/inclusaoEstoque.php">
+                <img src="assets/img/estoque.png" width="70%" /></a>
+            </span>
+            <h4><strong>Estoque</strong></h4>
+          </div>
+        </center>
+      </div>
+    </div>
+  </section>
+  <!-- RODAPÉ -->
+  <footer class="footer text-center">
+    <div class="container">
+      <ul class="list-inline mb-5">
+        <li class="list-inline-item">
+          &nbsp;<a href="https://github.com/GabrielSouza18"><img
+              src="https://img.icons8.com/ios-glyphs/100/000000/github.png" width="50px" /></a>
+        </li>
+      </ul>
+      <p class="text-muted mb-0 small">
+        <em>
+          Desenvolvido por &nbsp; <strong> Gabriel & Guilherme</strong></em>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+#logo {
+  margin-top: 1.875rem;
+  margin-bottom: 2rem;
+
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+.mostrar-nota {
+   
+  display: table !important;
+  width: 100%;
+  max-width: 400px;
+  font-weight: light;
+  line-height: 1.3em;
+}

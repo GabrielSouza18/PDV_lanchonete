@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #181a1b;
+}
+h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Botao Outline */
+button{
+    margin-top: 25px;
+    width: 80px;
+    height: 40px;
+    
+    border-radius: 10px;
+    background-color: none;
+    color:black;
+   font-family: "Poppins", sans-serif; 
+   cursor: pointer;
+   text-decoration: none;
+   
+}
+p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif; 
+  color: red;
+}
+
+.success{
+    border-color: #181a1b;
+    color: rgb(0, 0, 0);
+}
+.success:hover {
+  background-color: #181a1b;
+  color: white;
+
+}
+.alinhamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25vh;
+}
+.login {
+  background-color: white;
+
+  border-radius: 10px;
+  margin-left: 6rem;
+  border: none;
+
+  width: 25rem;
+  height: 25rem;
+}
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-top: 35px;
+ 
+}
+
+.icon {
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+}
+
+input[type=text]{
+    outline:none;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+  
+}
