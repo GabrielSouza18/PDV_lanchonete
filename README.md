@@ -31,7 +31,7 @@ Se você tiver algum feedback, por favor nos deixe saber por meio de  <a href = 
 
 ## Screenshots
 
-<img width="650px" align="center" src="/readme/desktop.jpg">
+<img width="650px" align="center" src="../fastburger/readme/desktop.jpg">
 
 
 ## Stack utilizada
